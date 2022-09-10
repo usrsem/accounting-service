@@ -1,6 +1,6 @@
 package com.github.accounting.operation.model.mapper;
 
-import com.github.accounting.operation.dal.datasource.JoinedOperationDataSource;
+import com.github.accounting.operation.dal.datasource.OperationDSReadResponseModel;
 import com.github.accounting.operation.dal.datasource.OperationDataSource;
 import com.github.accounting.operation.model.boundary.input.OperationCreateRequestModel;
 import com.github.accounting.operation.model.boundary.output.OperationReadResponseModel;
@@ -8,19 +8,19 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class OperationMapper {
-    public OperationReadResponseModel map(JoinedOperationDataSource ds) {
+    public OperationReadResponseModel dSReadResponseModel2ReadResponseModel(OperationDSReadResponseModel ds) {
         return OperationReadResponseModel.builder()
-                .id(ds.operationId())
-                .sum(ds.sum())
-                .description(ds.description())
-                .categoryName(ds.categoryName())
-                .fromAccountName(ds.fromAccountName())
-                .toAccountName(ds.toAccountName())
-                .createdAt(ds.createdAt())
+                .id(ds.getOperationId())
+                .sum(ds.getSum())
+                .description(ds.getDescription())
+                .categoryName(ds.getCategoryName())
+                .fromAccountName(ds.getFromAccountName())
+                .toAccountName(ds.getToAccountName())
+                .createdAt(ds.getCreatedAt())
                 .build();
     }
 
-    public OperationDataSource map(OperationCreateRequestModel requestModel) {
+    public OperationDataSource createRequestModel2DataSource(OperationCreateRequestModel requestModel) {
         return OperationDataSource.builder()
                 .categoryId(requestModel.getCategoryId())
                 .fromAccountId(requestModel.getFromAccountId())
