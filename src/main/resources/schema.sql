@@ -17,7 +17,7 @@ CREATE TABLE account
     name        VARCHAR(50)           NOT NULL,
     sum         FLOAT                 NOT NULL,
     common      BOOLEAN               NOT NULL,
-    employee_id BIGINT                NOT NULL,
+    employee_id BIGINT,
     PRIMARY KEY (id),
     FOREIGN KEY (employee_id) REFERENCES employee (id)
 );
