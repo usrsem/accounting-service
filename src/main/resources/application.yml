@@ -3,6 +3,13 @@ spring:
     url: r2dbc:h2:file:///./db/db
     username: sa
     password: password
+  profiles:
+    active: development
+
+logging:
+  level:
+    web: DEBUG
+
 #  Gotta wait for it :(
 #  webflux:
 #    date-format: yyyy-MM-dd hh:mm:ss
