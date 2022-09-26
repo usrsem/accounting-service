@@ -1,9 +1,4 @@
-DROP TABLE IF EXISTS operation;
-DROP TABLE IF EXISTS account;
-DROP TABLE IF EXISTS category;
-DROP TABLE IF EXISTS employee;
-
-CREATE TABLE employee
+CREATE TABLE IF NOT EXISTS employee
 (
     id        BIGINT auto_increment NOT NULL,
     full_name VARCHAR(100)          NOT NULL,
