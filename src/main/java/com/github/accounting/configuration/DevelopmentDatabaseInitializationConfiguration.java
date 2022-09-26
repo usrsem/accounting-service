@@ -9,7 +9,8 @@ import org.springframework.r2dbc.connection.init.ConnectionFactoryInitializer;
 import org.springframework.r2dbc.connection.init.ResourceDatabasePopulator;
 
 @Configuration
-public class DatabaseInitializationConfiguration {
+@Profile({"development"})
+public class DevelopmentDatabaseInitializationConfiguration {
 
     @Bean
     ConnectionFactoryInitializer initializer(ConnectionFactory connectionFactory) {
