@@ -1,4 +1,4 @@
-package com.github.accounting.operation.controller;
+package com.github.accounting.domain.operation.controller;
 
 import com.github.accounting.model.UserData;
 import com.github.accounting.operation.model.boundary.input.*;
