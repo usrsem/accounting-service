@@ -1,6 +1,7 @@
-package com.github.accounting.operation.model.boundary.output;
+package com.github.accounting.domain.operation.model.boundary.output;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.github.accounting.model.OperationStatus;
 import lombok.Builder;
 
 import java.time.LocalDateTime;
