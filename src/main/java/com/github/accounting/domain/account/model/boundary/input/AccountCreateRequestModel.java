@@ -1,4 +1,4 @@
-package com.github.accounting.account.model.boundary.input;
+package com.github.accounting.domain.account.model.boundary.input;
 
 public record AccountCreateRequestModel(
         String name,
