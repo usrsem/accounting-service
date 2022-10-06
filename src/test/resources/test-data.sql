@@ -27,7 +27,7 @@ VALUES (default, 'Danya', 'Infinity', FALSE, 3);
 INSERT INTO account
 VALUES (default, 'Vanya', 100, FALSE, 4);
 INSERT INTO account
-VALUES (default, 'Chief1', 5000.0, FALSE, 5);
+VALUES (default, 'Chief2', 5000.0, FALSE, 5);
 
 INSERT INTO category
 VALUES (default, 'transfer');
@@ -47,21 +47,22 @@ VALUES (3, 'CHIEF');
 
 -- Operations from worker (3)
 INSERT INTO operation
-VALUES (default, 'Operation from common account', 500.0, 3, 2, 1, 2, default, default);
+VALUES (default, 'Operation from common account', 500.0, 3, null, 1, 2, '2022-02-05 23.59.59', default);
 INSERT INTO operation
-VALUES (default, 'Another operation from common account', 1500.0, 3, 2, 1, 2, default, default);
+VALUES (default, 'Another operation from common account', 1500.0, 3, null, 1, 2, '2022-02-05 23.59.59', default);
 INSERT INTO operation
-VALUES (default, 'Operation from worker account', 700.0, 2, 4, 1, 2, default, default);
--- Operations from chief (3)
+VALUES (default, 'Operation from worker account', 700.0, 2, 5, 1, 2, '2022-02-05 23.59.59', default);
+-- Operations from chief (4)
 INSERT INTO operation
-VALUES (default, 'Operation from chief to Tagir', 500.0, 1, 2, 1, 1, default, default);
+VALUES (default, 'Operation from chief to Tagir', 500.0, 1, 2, 1, 1, '2022-02-05 23.59.59', default);
 INSERT INTO operation
-VALUES (default, 'Operation from chief to Vanya', 500.0, 1, 4, 1, 1, default, default);
+VALUES (default, 'Operation from chief to Vanya', 500.0, 1, 5, 1, 1, '2022-02-05 23.59.59', default);
 INSERT INTO operation
 VALUES (default, 'Very old operation from chief to Tagir', 500.0, 1, 2, 1, 1, '2022-02-05 23.59.59', default);
--- Operations from accountant to chief (1)
 INSERT INTO operation
-VALUES (default, 'Operation from accountant to chief', 20000.0, 4, 1, 2, 3, default, default);
--- Other operations
+VALUES (default, 'Chief withdraws from common account', 150000.0, 3, NULL, 1, 1, '2022-02-05 23.59.59', default);
+-- Operations from accountant to chief (2)
 INSERT INTO operation
-VALUES (default, 'Some operation from another chief', 100.0, 5, 2, 1, 5, default, default);
+VALUES (default, 'Operation from accountant to chief', 20000.0, 4, 1, 2, 3, '2022-02-05 23.59.59', default);
+INSERT INTO operation
+VALUES (default, 'Operation from accountant to another chief', 20000.0, 4, 6, 2, 3, '2022-02-05 23.59.59', default);
