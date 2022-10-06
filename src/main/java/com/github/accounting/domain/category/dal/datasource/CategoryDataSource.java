@@ -1,4 +1,4 @@
-package com.github.accounting.category.dal.datasource;
+package com.github.accounting.domain.category.dal.datasource;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
