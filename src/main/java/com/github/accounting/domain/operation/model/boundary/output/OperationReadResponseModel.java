@@ -15,6 +15,7 @@ public record OperationReadResponseModel(
         String fromAccountName,
         String toAccountName,
         @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss")
-        LocalDateTime createdAt
+        LocalDateTime createdAt,
+        OperationStatus status
 ) {
 }
