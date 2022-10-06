@@ -1,4 +1,4 @@
-package com.github.accounting.account.model.boundary.output;
+package com.github.accounting.domain.account.model.boundary.output;
 
 import lombok.Builder;
 
@@ -6,6 +6,7 @@ import lombok.Builder;
 public record AccountReadResponseModel(
         long id,
         String name,
-        boolean common
+        boolean common,
+        double sum
 ) {
 }
