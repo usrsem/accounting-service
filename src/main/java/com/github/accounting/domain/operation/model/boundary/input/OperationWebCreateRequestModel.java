@@ -1,4 +1,4 @@
-package com.github.accounting.operation.model.boundary.input;
+package com.github.accounting.domain.operation.model.boundary.input;
 
 import lombok.Data;
 
