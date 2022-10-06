@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS operation
     description     TEXT,
     sum             FLOAT                         NOT NULL,
     from_account_id BIGINT                        NOT NULL,
-    to_account_id   BIGINT                        NOT NULL,
+    to_account_id   BIGINT                        NULL,
     category_id     INT                           NOT NULL,
     employee_id     BIGINT                        NOT NULL,
     created_at      DATETIME    DEFAULT CURRENT_TIME(),
