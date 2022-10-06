@@ -1,5 +1,6 @@
-package com.github.accounting.account.dal.datasource;
+package com.github.accounting.domain.account.dal.datasource;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -9,6 +10,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @Table("account")
 @Data
 @Builder
+@AllArgsConstructor
 public class AccountDataSource {
 
     @Id
@@ -23,4 +25,7 @@ public class AccountDataSource {
 
     @Column("employee_id")
     private Long employeeId;
+
+    @Column("sum")
+    private Double sum;
 }
